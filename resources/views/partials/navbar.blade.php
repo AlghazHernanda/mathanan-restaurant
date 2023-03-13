@@ -32,8 +32,11 @@
                             <i class="uil uil-shopping-bag"></i>
                             <span class="cart-number">3</span>
                         </a>
-                        <a href="javascript:void(0)" class="header-btn">
-                            <i class="uil uil-user-md"></i>
+                        <a href="{{ route('login') }}" class="header-btn">
+                            <i class="uil uil-user-md">Login</i>
+                        </a>
+                        <a href="{{ route('register') }}" class="header-btn">
+                            <i class="uil uil-user-md">Register</i>
                         </a>
                     </div>
                 </div>

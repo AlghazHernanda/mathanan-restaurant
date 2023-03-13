@@ -36,7 +36,7 @@
                         <button class="menu-toggle"><span></span><span></span></button>
                         <nav class="header-menu">
                             <ul class="menu food-nav-menu">
-                                <li><a href="#home">Home</a></li>
+                                <li><a href="#home">Dashboard</a></li>
                                 <li><a href="#about">About</a></li>
                                 <li><a href="#menu">Menu</a></li>
                                 <li><a href="#gallery">Gallery</a></li>
@@ -1128,7 +1128,7 @@
                                             <h3 class="h3-title">Links</h3>
                                             <ul class="column-2">
                                                 <li>
-                                                    <a href="#home" class="footer-active-menu">Home</a>
+                                                    <a href="#home" class="footer-active-menu">Dashboard</a>
                                                 </li>
                                                 <li><a href="#about">About</a></li>
                                                 <li><a href="#menu">Menu</a></li>
