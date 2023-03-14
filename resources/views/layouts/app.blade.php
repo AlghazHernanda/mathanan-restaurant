@@ -1,36 +1,76 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
+<html lang="en">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Website</title>
+    <!-- for icons  -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- bootstrap  -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- for swiper slider  -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+    <!-- fancy box  -->
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
+    <!-- custom css  -->
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    @livewireScripts
+</head>
 
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-    </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
-            @include('layouts.navigation')
+<body class="body-fixed">
 
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endif
+    {{-- manggil navbar di folder partials.navbar --}}
+    @include('partials.navbar')
 
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
-        </div>
-    </body>
+
+      <!-- Page Content -->
+      <main>
+        {{ $slot }}
+     </main>
+
+
+
+  <!-- jquery  -->
+  <script src="assets/js/jquery-3.5.1.min.js"></script>
+  <!-- bootstrap -->
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+
+  <!-- fontawesome  -->
+  <script src="assets/js/font-awesome.min.js"></script>
+
+  <!-- swiper slider  -->
+  <script src="assets/js/swiper-bundle.min.js"></script>
+
+  <!-- mixitup -- filter  -->
+  <script src="assets/js/jquery.mixitup.min.js"></script>
+
+  <!-- fancy box  -->
+  <script src="assets/js/jquery.fancybox.min.js"></script>
+
+  <!-- parallax  -->
+  <script src="assets/js/parallax.min.js"></script>
+
+  <!-- gsap  -->
+  <script src="assets/js/gsap.min.js"></script>
+
+  <!-- scroll trigger  -->
+  <script src="assets/js/ScrollTrigger.min.js"></script>
+  <!-- scroll to plugin  -->
+  <script src="assets/js/ScrollToPlugin.min.js"></script>
+  <!-- rellax  -->
+  <!-- <script src="assets/js/rellax.min.js"></script> -->
+  <!-- <script src="assets/js/rellax-custom.js"></script> -->
+  <!-- smooth scroll  -->
+  <script src="assets/js/smooth-scroll.js"></script>
+  <!-- custom js  -->
+  <script src="{{ asset('js/main.js') }}"></script>
+
+  @livewireScripts
+
+</body>
+
 </html>

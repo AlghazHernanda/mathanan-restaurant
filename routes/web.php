@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\LandingpageController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Livewire\MenuComponent;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,9 +16,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('landing_page');
-});
+// Route::get('/', function () {
+//     return view('landing_page')->name('landing_page');
+// });
+
+Route::get('/', [LandingpageController::class, 'index'])->name('landing_page');
+Route::get('/menu', MenuComponent::class)->name('menu');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
