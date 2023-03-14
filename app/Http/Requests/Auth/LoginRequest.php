@@ -39,9 +39,10 @@ class LoginRequest extends FormRequest
      */
     public function authenticate(): void
     {
+        //ini berfungsi untuk keamanan jika user melakukan login trus menerus salah, logic nya ada di bawah function ini
         $this->ensureIsNotRateLimited();
 
-        if (! Auth::attempt($this->only('email', 'password'), $this->boolean('remember'))) {
+        if (!Auth::attempt($this->only('email', 'password'), $this->boolean('remember'))) {
             RateLimiter::hit($this->throttleKey());
 
             throw ValidationException::withMessages([
@@ -59,7 +60,8 @@ class LoginRequest extends FormRequest
      */
     public function ensureIsNotRateLimited(): void
     {
-        if (! RateLimiter::tooManyAttempts($this->throttleKey(), 5)) {
+        //jika user dalam 5 percobaan tidak gagal, maka login berhasil, jika tidak akan ada validation error
+        if (!RateLimiter::tooManyAttempts($this->throttleKey(), 3)) {
             return;
         }
 
@@ -80,6 +82,6 @@ class LoginRequest extends FormRequest
      */
     public function throttleKey(): string
     {
-        return Str::transliterate(Str::lower($this->input('email')).'|'.$this->ip());
+        return Str::transliterate(Str::lower($this->input('email')) . '|' . $this->ip());
     }
 }

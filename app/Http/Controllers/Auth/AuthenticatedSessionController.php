@@ -23,8 +23,10 @@ class AuthenticatedSessionController extends Controller
     /**
      * Handle an incoming authentication request.
      */
+    //Loginrequest akan meng-validasi data yang dimasukan di form,
     public function store(LoginRequest $request): RedirectResponse
     {
+        //di dalam Loginrequest, ada funtion authenticate yaitu logic dari login
         $request->authenticate();
 
         $request->session()->regenerate();
