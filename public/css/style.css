@@ -4,6 +4,8 @@
 /* font-family: 'Playfair Display', serif;
 font-family: 'Poppins', sans-serif; */
 
+
+
 body {
     font-family: 'Poppins', sans-serif;
     text-rendering: optimizeLegibility !important;
@@ -25,6 +27,38 @@ body, html {
 img {
     max-width: 100%;
 }
+
+/*table*/
+table {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border-collapse: collapse;
+    vertical-align: middle;
+  }
+  
+  table td, table th {
+    padding: 10px 20px;
+    border: 1px solid #e2e9e1;
+    vertical-align: middle;
+  }
+  
+  table thead > tr > th {
+    vertical-align: middle;
+    border-bottom: 0;
+  }
+  
+  table p {
+    margin-bottom: 0;
+  }
+  
+  table.clean td, table.clean th {
+    border: 0;
+    border-top: 1px solid #e2e9e1;
+  }
+  
+  table .product-thumbnail img {
+    max-width: 80px;
+  }
 
 .site-header {
     position: fixed;

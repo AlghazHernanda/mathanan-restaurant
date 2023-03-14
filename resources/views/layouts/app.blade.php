@@ -17,6 +17,12 @@
     <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
     <!-- custom css  -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+    {{-- buat cart --}}
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/imgs/theme/favicon.ico') }}">
+    
+{{-- <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}"> --}}
+<link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
     @livewireScripts
 </head>
 
@@ -66,6 +72,29 @@
   <!-- <script src="assets/js/rellax-custom.js"></script> -->
   <!-- smooth scroll  -->
   <script src="assets/js/smooth-scroll.js"></script>
+
+  {{-- buat cart --}}
+  <script src="{{ asset('assets/js/vendor/modernizr-3.6.0.min.js') }}"></script>
+<script src="{{ asset('assets/js/vendor/jquery-3.6.0.min.js') }}"></script>
+<script src="{{ asset('assets/js/vendor/jquery-migrate-3.3.0.min.js') }}"></script>
+<script src="{{ asset('assets/js/vendor/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('assets/js/plugins/slick.js') }}"></script>
+<script src="{{ asset('assets/js/plugins/jquery.syotimer.min.js') }}"></script>
+<script src="{{ asset('assets/js/plugins/wow.js') }}"></script>
+<script src="{{ asset('assets/js/plugins/jquery-ui.js') }}"></script>
+<script src="{{ asset('assets/js/plugins/perfect-scrollbar.js') }}"></script>
+<script src="{{ asset('assets/js/plugins/magnific-popup.js') }}"></script>
+<script src="{{ asset('assets/js/plugins/select2.min.js') }}"></script>
+<script src="{{ asset('assets/js/plugins/waypoints.js') }}"></script>
+<script src="{{ asset('assets/js/plugins/counterup.js') }}"></script>
+<script src="{{ asset('assets/js/plugins/jquery.countdown.min.js') }}"></script>
+<script src="{{ asset('assets/js/plugins/images-loaded.js') }}"></script>
+<script src="{{ asset('assets/js/plugins/isotope.js') }}"></script>
+<script src="{{ asset('assets/js/plugins/scrollup.js') }}"></script>
+<script src="{{ asset('assets/js/plugins/jquery.vticker-min.js') }}"></script>
+<script src="{{ asset('assets/js/plugins/jquery.theia.sticky.js') }}"></script>
+<script src="{{ asset('assets/js/plugins/jquery.elevatezoom.js') }}"></script>
+
   <!-- custom js  -->
   <script src="{{ asset('js/main.js') }}"></script>
 

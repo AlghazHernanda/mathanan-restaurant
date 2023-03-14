@@ -1,5 +1,5 @@
 <div>
-        <section class="mt-50 mb-50">
+        <section class="our-menu section bg-light repeat-img" id="menu">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
