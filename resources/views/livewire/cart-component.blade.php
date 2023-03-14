@@ -35,15 +35,15 @@
                                         <td class="price" data-title="Price"><span>{{ $item->model->regular_price }}</span></td>
                                         <td class="text-center" data-title="Stock">
                                             <div class="detail-qty border radius  m-auto">
-                                                <a href="#" class="qty-down"  wire:click.prevent="decreaseQuantity('{{ $item->rowId }}')" ><i class="fi-rs-angle-small-down"></i></a>
+                                                <a href="#" class="qty-down"  wire:click.prevent="decreaseQuantity('{{ $item->rowId }}')" ><i class="uil uil-minus"></i></a>
                                                 <span class="qty-val">{{ $item->qty }}</span>
-                                                <a href="#" class="qty-up"  wire:click.prevent="increaseQuantity('{{ $item->rowId }}')"><i class="fi-rs-angle-small-up"></i></a>
+                                                <a href="#" class="qty-up"  wire:click.prevent="increaseQuantity('{{ $item->rowId }}')"><i class="uil uil-plus"></i></a>
                                             </div>
                                         </td>
                                         <td class="text-right" data-title="Cart">
                                             <span>{{ $item->subtotal }}</span>
                                         </td>
-                                        <td class="action" data-title="Remove"><a href="#" class="text-muted" wire:click.prevent="destroy('{{ $item->rowId }}')"><i class="fi-rs-trash"></i></a></td>
+                                        <td class="action" data-title="Remove"><a href="#" class="text-muted" wire:click.prevent="destroy('{{ $item->rowId }}')"><i class="uil uil-trash"></i></a></td>
                                     </tr>
                                     @endforeach
                                    
