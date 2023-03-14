@@ -49,7 +49,7 @@
                                    
                                   
                                         <td colspan="6" class="text-end">
-                                            <a href="#" class="text-muted" wire:click.prevent="clearAll()"> <i class="fi-rs-cros s-small"></i> Clear Cart</a>
+                                            <a href="#" class="text-muted" wire:click.prevent="clearAll()"> <i class="uil uil-x"></i> Clear Cart</a>
                                         </td>
                                     </tr>
                                 </tbody>
