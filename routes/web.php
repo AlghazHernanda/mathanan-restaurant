@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\LandingpageController;
-use App\Http\Controllers\ProfileController;
+use App\Http\Livewire\CartComponent;
 use App\Http\Livewire\MenuComponent;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\LandingpageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [LandingpageController::class, 'index'])->name('landing_page');
 Route::get('/menu', MenuComponent::class)->name('menu');
+Route::get('/cart', CartComponent::class)->name('menu.cart');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
